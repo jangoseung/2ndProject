@@ -2,6 +2,7 @@ package com.smhrd.controller;
 
 import java.io.IOException;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,7 +26,6 @@ public class LoginController extends HttpServlet {
 		String name = req.getParameter("name");
 		String gender = req.getParameter("gender");
 		int age = Integer.parseInt(req.getParameter("age"));
-		String time = req.getParameter("time");
 		
 		userVO vo = new userVO();
 		
@@ -34,10 +34,17 @@ public class LoginController extends HttpServlet {
 		vo.setName(name);
 		vo.setGender(gender);
 		vo.setAge(age);
-		vo.setTime(time);
 		
 		userDAO dao = new userDAO();
 		int result = dao.sign(vo);
 		
+		if(result == 1) {
+			System.out.println("회원가입 성공");
+
+			
+		}else if(result == 0) {
+			System.out.println("회원가입 실패");
+
+		}
 	}
 }
