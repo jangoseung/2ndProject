@@ -73,7 +73,7 @@ public class postDAO {
             stmt.setInt(1, postIdx);
             return stmt.executeUpdate() > 0;
 		}
-		
+		// 다시 수정후 보냄
 	}
 	
 }
