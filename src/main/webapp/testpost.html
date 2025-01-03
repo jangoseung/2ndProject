@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Post Management</title>
+</head>
+<body>
+    <h1>Post Management Test</h1>
+
+    <!-- Form for inserting a new post -->
+    <h2>Insert New Post</h2>
+    <form action="PostController" method="post">
+        <label for="postTitle">Title:</label>
+        <input type="text" id="postTitle" name="postTitle" required><br>
+
+        <label for="postContent">Content:</label>
+        <textarea id="postContent" name="postContent" required></textarea><br>
+
+        <label for="postFile">File:</label>
+        <input type="text" id="postFile" name="postFile"><br>
+
+        <label for="userId">User ID:</label>
+        <input type="text" id="userId" name="userId" required><br>
+
+        <label for="commIdx">Community Index:</label>
+        <input type="number" id="commIdx" name="commIdx" required><br>
+
+        <button type="submit">Insert Post</button>
+    </form>
+
+    <hr>
+
+    <!-- Section for displaying all posts -->
+    <h2>All Posts</h2>
+    <button onclick="location.href='PostController?action=list'">Refresh Posts</button>
+    <div id="postList">
+        <!-- Posts will be displayed here -->
+    </div>
+</body>
+</html>
