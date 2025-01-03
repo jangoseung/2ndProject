@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.smhrd.db.Mapper">
-
-
+	<select id="login">
+		SELECT USER_ID, USER_NAME, USER_ROLE FROM TB_USER WHERE UESER_ID=? AND USER_PW=?
+	</select>
+	
+	<insert id="sign">
+		INSERT INTO TB_USER(USER_ID, USER_PW, USER_NAME, USER_GENDER, USER_AGE, JOINED_AT) VALUES(?,?,?,?,?, CURRENT_TIMESTAMP);
+	</insert>
+	
 </mapper>
