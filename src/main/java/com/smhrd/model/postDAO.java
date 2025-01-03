@@ -25,6 +25,7 @@ public class postDAO {
 		String sql = "SELECT * FROM tb_post";
 		List<postVO> posts = new ArrayList<>();
 		
+		
 		try (PreparedStatement stmt = conn.prepareStatement(sql);
 				ResultSet rs = stmt.executeQuery()) {
 			while (rs.next()) {
@@ -41,6 +42,7 @@ public class postDAO {
 				posts.add(post);
 				
 			}
+			
 		}
 
 		return posts;		
@@ -63,6 +65,8 @@ public class postDAO {
 				}
 			}
 			
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
 		return -1;	
 	}
