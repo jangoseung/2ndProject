@@ -1,7 +1,5 @@
 package com.smhrd.model;
 
-import java.time.LocalDateTime;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,4 +17,5 @@ public class userVO {
 	private int age;
 	private String role;
 	private String time;
+	
 }

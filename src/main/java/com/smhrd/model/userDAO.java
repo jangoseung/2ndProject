@@ -9,10 +9,14 @@ public class userDAO {
 	
 	SqlSessionFactory factory = SqlSessionManager.getSqlSession();
 	
-	public void Login(userVO vo) {
+	public int sign(userVO vo) {
 		
 		SqlSession session = factory.openSession(true);
 		
 		int result = session.insert("sign", vo);
+		
+		session.close();
+		
+		return result;
 	}
 }
