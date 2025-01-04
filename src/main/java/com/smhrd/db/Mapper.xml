@@ -39,7 +39,7 @@
 
 	<insert id="insertPost" parameterType="com.smhrd.model.postVO"
 		useGeneratedKeys="true" keyProperty="postIdx">
-		INSERT INTO tb_post (post_title, post_content, post_file, created_at,
+		INSERT INTO tb_post (post_title, post_content, post_file,
 		post_views, post_likes, user_id, comm_idx)
 		VALUES (#{postTitle}, #{postContent}, #{postFile}, CURRENT_TIMESTAMP, 0, 0,
 		#{userId}, #{commIdx})

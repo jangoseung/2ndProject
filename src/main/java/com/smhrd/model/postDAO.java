@@ -34,7 +34,7 @@ public class postDAO {
 				post.setPostTitle(rs.getString("post_title"));
 				post.setPostContent(rs.getString("post_Content"));
 				post.setPostFile(rs.getString("post_file"));
-				post.setCreatedAt(rs.getString("created_at"));
+	
 				post.setPostViews(rs.getInt("post_views"));
 				post.setPostLikes(rs.getInt("post_likes"));
 				post.setUserId(rs.getString("user_id"));

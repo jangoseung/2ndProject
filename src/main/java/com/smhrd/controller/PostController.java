@@ -28,7 +28,7 @@ public class PostController extends HttpServlet {
         String userId = request.getParameter("userId");
         int commIdx = Integer.parseInt(request.getParameter("commIdx"));
 
-        postVO post = new postVO(0, postTitle, postContent, postFile, null, 0, 0, userId, commIdx);
+        postVO post = new postVO(0, postTitle, postContent, postFile, 0, 0, userId, commIdx);
 
         try (SqlSession session = sqlSessionFactory.openSession()) {
             postDAO dao = session.getMapper(postDAO.class);
@@ -57,7 +57,6 @@ public class PostController extends HttpServlet {
                         .append("Title: ").append(post.getPostTitle()).append("<br>")
                         .append("Content: ").append(post.getPostContent()).append("<br>")
                         .append("File: ").append(post.getPostFile()).append("<br>")
-                        .append("Created At: ").append(post.getCreatedAt()).append("<br>")
                         .append("Views: ").append(post.getPostViews()).append("<br>")
                         .append("Likes: ").append(post.getPostLikes()).append("<br>")
                         .append("User ID: ").append(post.getUserId()).append("<br>")
