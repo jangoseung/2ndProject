@@ -4,7 +4,7 @@
 
 	<select id="login">
 		SELECT USER_ID, USER_NAME, USER_ROLE FROM TB_USER
-		WHERE UESER_ID=? AND USER_PW=?
+		WHERE UESER_ID=#{id} AND USER_PW=#{pw}
 	</select>
 
 	<insert id="sign">
@@ -12,8 +12,24 @@
 		VALUES (#{id}, #{pw}, #{name}, #{gender}, #{age}
 		);
 	</insert>
+	
+	<delete id="delete_user">
+		DELET FROM TB_USER WHERE USER_ID=#{id}
+	</delete>
+	
+	<update id="update_user">
+		UPDATE TB_USER
+		SET (USER_PW, USER_NAME)
+		WHERE USER_ID=#{id}
+	</update>
 
 	<!-- ㄴtb_user -->
+	
+	<select id="">
+		SELECT 
+	</select>
+	
+	<!-- ㄴtb_commuity -->
 
 
 	<select id="getAllPosts" resultType="com.smhrd.model.postVO">
