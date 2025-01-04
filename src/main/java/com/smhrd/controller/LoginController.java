@@ -27,7 +27,6 @@ public class LoginController extends HttpServlet {
 		String name = req.getParameter("name");
 		String gender = req.getParameter("gender");
 		int age = Integer.parseInt(req.getParameter("age"));
-		Timestamp time = req.getParameter(time);
 		
 		userVO vo = new userVO();
 		

@@ -1,7 +1,5 @@
 package com.smhrd.model;
 
-import java.security.Timestamp;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -18,5 +16,4 @@ public class userVO {
 	private String gender;
 	private int age;
 	private String role;
-	private Timestamp time;
 }

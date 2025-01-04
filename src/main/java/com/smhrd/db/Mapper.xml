@@ -8,8 +8,8 @@
 	</select>
 
 	<insert id="sign">
-		INSERT INTO TB_USER (USER_ID, USER_PW, USER_NAME, USER_GENDER, USER_AGE, JOINED_AT)
-		VALUES (#{id}, #{pw}, #{name}, #{gender}, #{age}, #{time}
+		INSERT INTO TB_USER (USER_ID, USER_PW, USER_NAME, USER_GENDER, USER_AGE)
+		VALUES (#{id}, #{pw}, #{name}, #{gender}, #{age}
 		);
 	</insert>
 
