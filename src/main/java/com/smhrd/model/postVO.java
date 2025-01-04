@@ -16,7 +16,7 @@ public class postVO {
 	private String postTitle;
 	private String postContent;
 	private String postFile;
-	private String createdAt;
+
 	private int postViews;
 	private int postLikes;
 	private String userId;
